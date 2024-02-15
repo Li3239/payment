@@ -1,0 +1,34 @@
+body {
+
+    margin: 0;
+    // background-color: rgb(105, 12, 198);
+    // color: green;
+}
+
+// 定义常量
+$mybackground: red;
+
+
+.subclass {
+    background-color: aliceblue;
+
+    div {
+        p {
+            color: $mybackground;
+        }
+
+        .subclass1 {
+            color: #000;
+        }
+
+        a {
+            :hover {
+                color: rebeccapurple;
+            }
+
+            ::after {
+                color: #000;
+            }
+        }
+    }
+}

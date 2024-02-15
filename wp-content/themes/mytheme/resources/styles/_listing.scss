@@ -1,0 +1,131 @@
+main {
+    .woocommerce-products-header {
+        background-color: transparent;
+    }
+
+
+    /* ul so klasa products ako ima mesto megju ul i .products togas ke znachi elemnt vo ul so klasa products */
+    ul.products {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        width: calc(100% + 10px);
+
+        /*  justify-content: space-between; */
+        li.product {
+            list-style: none;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0, 0, 10px, rgba(0, 0, 0, 0.15);
+            width: calc(25% - 10px);
+            box-sizing: border-box;
+            padding: 20px;
+            margin: 5px;
+
+            a {
+                position: relative;
+                display: block;
+
+                .onsale {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    background-color: black;
+                    color: white;
+                    padding: 8px 10px;
+                    font-weight: bold;
+                    /*  z-index: 100; */
+                }
+
+                .percent-off {
+                    background: red;
+                    color: white;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 0;
+                    margin-top: -50px;
+                }
+
+            }
+
+            .rating {
+                height: 24px;
+                width: calc(24px * 5);
+                background-image: url("../../assets/images/star_unfilled.png");
+                background-size: auto 100%;
+                background-position: center center;
+                background-repeat: repeat-x;
+
+                .fill {
+                    width: 0%;
+                    height: 100%;
+                    background-image: url("../../assets/images/star_filled.png");
+                    background-size: auto 100%;
+                    background-repeat: repeat-x;
+                    background-position: center center;
+
+
+                }
+
+
+
+            }
+
+            img.attachment-woocommerce_thumbnail {
+                max-width: 100%;
+                height: auto;
+                width: 100%;
+            }
+
+            a,
+            h2 {
+                color: $primary-font-color;
+                text-decoration: none;
+            }
+
+            .image-frame {
+                position: relative;
+
+                .new {
+                    padding: 8px 12px;
+                    background-color: white;
+                    position: absolute;
+                    border: 1px solid #777;
+                    right: 10px;
+                    bottom: 10px;
+                }
+            }
+
+            .price {
+                margin-top: 10px;
+                min-height: 40px;
+                width: 100%;
+                display: block;
+                line-height: 40px;
+                font-size: 1.2em;
+
+                ins {
+                    color: red;
+                    text-decoration: none;
+                    margin-left: 10px;
+
+                }
+
+                .woocommerce-price-suffix {
+                    color: red;
+                }
+            }
+
+            .button {
+                background-color: red;
+                display: block;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+
+        }
+    }
+}

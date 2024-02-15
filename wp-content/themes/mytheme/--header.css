@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('./assets/fonts/gt-walsheim-font-family-1707234443-0/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*****************
+** information section
+******************/
+section.shop-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 82.5%;
+    height: 30px;
+    border-bottom: 0.8px solid rgb(217, 216, 216);
+}
+
+section.shop-information p{
+    font-family: GT Walsheim Pro;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/*****************
+** header
+******************/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 82.5%;
+    height: 102px;
+    margin: auto;
+}
+
+header .line-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+header .line-1 .column-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+header .line-1 .column-title .store-title {
+    font-size: 30px;
+    line-height: 24px;
+}
+
+header .line-1 .column-menu {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    align-items: center;
+}
+
+header .line-1 .column-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header .line-1 .column-menu nav ul li {
+    list-style: none;
+    margin-right: 20px;
+    flex-shrink: 0;
+    /* 添加相对定位: 鼠标放在菜单上时，生成的上下线宽度为父元素li的100% */
+    position: relative;
+}
+
+header .line-1 .column-menu nav ul li a {
+    text-decoration: none;
+
+    font-family: GT Walsheim Pro;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1E1E1E;
+}
+
+
+/* 菜单hover时，添加上下两行横线 */
+/* 初始状态下隐藏 ::before 和 ::after 元素 */
+header .line-1 .column-menu nav ul li::before,
+header .line-1 .column-menu nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #00a0e4;
+    transition: width 0.5s ease;
+}
+
+/* 鼠标悬停时设置 ::before 和 ::after 元素的宽度为 100% */
+header .line-1 .column-menu nav ul li:hover::before,
+header .line-1 .column-menu nav ul li:hover::after {
+    width: 100%;
+}
+
+/* li::before 表示上线 */
+header .line-1 .column-menu nav ul li::before {
+    top: 0;
+}
+
+/* li::after 表示下线 */
+header .line-1 .column-menu nav ul li::after {
+    bottom: 0;
+}
+
+/* header .line-1 .column-menu ul li a:hover {
+    color: #00a0e4;
+} */
+
+header .line-1 .column-login {
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+    height: auto;
+    align-items: center;
+}
+
+header .line-1 .column-login a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-right: 20px;
+    font-family: GT Walsheim Pro;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1E1E1E;
+}
+
+/* shopping cart */
+header .line-1 .column-login .cart-widget a{
+    text-decoration: none;
+}
+
+header .line-1 .column-login .cart-widget .cart-count{
+    color: red;
+    font-size: 20px;
+}

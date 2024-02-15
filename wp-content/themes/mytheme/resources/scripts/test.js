@@ -1,0 +1,1 @@
+//alert("test"); //npm build 后保存于 build/assets/app.js中，所有的js保存于一个文件

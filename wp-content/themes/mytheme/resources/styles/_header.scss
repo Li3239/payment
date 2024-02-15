@@ -1,0 +1,131 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 82.5%;
+    height: 100px;
+    margin: auto;
+
+    .header-line {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .column-menu {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            width: 60%;
+            margin-right: 20px;
+
+            ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    margin-right: 20px;
+                    flex-shrink: 0;
+                    /* 添加相对定位: 鼠标放在菜单上时，生成的上下线宽度为父元素li的100% */
+                    position: relative;
+
+                    a {
+                        text-decoration: none;
+                
+                        font-family: GT Walsheim Pro;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: #1E1E1E;
+                    }
+                }
+                li::before, li::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: #00a0e4;
+                    transition: width 0.5s ease;
+                }
+                li:hover::before, li:hover::after {
+                    width: 100%;
+                }
+                li::before {
+                    top: 0;
+                }
+                li::after {
+                    bottom: 0;
+                }
+            }
+        }
+
+        .column-login {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 40%;
+            
+            nav {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                height: auto;
+
+                ul {
+
+                    
+                    li {
+                        list-style: none;
+                        margin-right: 20px;
+                        flex-shrink: 0;
+                        position: relative;
+                        margin-right: 50px;
+            
+                        a {
+                            text-decoration: none;
+                            visibility: hidden;
+                        }
+                    }
+    
+                    li.menu-account,
+                    li.menu-search,
+                    li.menu-heart,
+                    li.menu-cart {
+                        content: "";
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        // top: 4.67px;
+                        // left: 2.33px;
+                        flex-shrink: 0;
+                        background-size: cover;
+                    }
+    
+                    li.menu-account {
+                        background-image: url('../../assets/images/account.png');
+                    }
+    
+                    li.menu-search {
+                        background-image: url('../../assets/images/search.png');
+                    }
+    
+                    li.menu-heart {
+                        background-image: url('../../assets/images/heart.png');
+                    }
+    
+                    li.menu-cart {
+                        background-image: url('../../assets/images/cart.png');
+                    }
+                }
+            }
+        }
+    }
+
+}
