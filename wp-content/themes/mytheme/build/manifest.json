@@ -1,0 +1,36 @@
+{
+  "assets/images/account.png": {
+    "file": "assets/account.png",
+    "src": "assets/images/account.png"
+  },
+  "assets/images/banner.jpeg": {
+    "file": "assets/banner.jpeg",
+    "src": "assets/images/banner.jpeg"
+  },
+  "assets/images/cart.png": {
+    "file": "assets/cart.png",
+    "src": "assets/images/cart.png"
+  },
+  "assets/images/heart.png": {
+    "file": "assets/heart.png",
+    "src": "assets/images/heart.png"
+  },
+  "assets/images/logo.png": {
+    "file": "assets/logo.png",
+    "src": "assets/images/logo.png"
+  },
+  "assets/images/search.png": {
+    "file": "assets/search.png",
+    "src": "assets/images/search.png"
+  },
+  "resources/scripts/app.js": {
+    "file": "assets/app.js",
+    "isEntry": true,
+    "src": "resources/scripts/app.js"
+  },
+  "resources/styles/app.scss": {
+    "file": "assets/app.css",
+    "isEntry": true,
+    "src": "resources/styles/app.scss"
+  }
+}

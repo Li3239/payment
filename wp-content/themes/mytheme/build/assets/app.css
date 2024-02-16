@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+header .header-line {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+header .header-line .column-menu {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 60%;
+  margin-right: 20px;
+}
+header .header-line .column-menu ul {
+  list-style: none;
+  display: flex;
+}
+header .header-line .column-menu ul li {
+  list-style: none;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: relative;
+  margin-right: 50px;
+}
+header .header-line .column-menu ul li a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+header .header-line .column-menu ul li::before, header .header-line .column-menu ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #00a0e4;
+  transition: width 0.5s ease;
+}
+header .header-line .column-menu ul li:hover::before, header .header-line .column-menu ul li:hover::after {
+  width: 100%;
+}
+header .header-line .column-menu ul li::before {
+  top: 0;
+}
+header .header-line .column-menu ul li::after {
+  bottom: 0;
+}
+header .header-line .column-login {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40%;
+}
+header .header-line .column-login nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+}
+header .header-line .column-login nav ul li {
+  list-style: none;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: relative;
+  margin-right: 50px;
+}
+header .header-line .column-login nav ul li a {
+  text-decoration: none;
+  visibility: hidden;
+}
+header .header-line .column-login nav ul li.menu-account,
+header .header-line .column-login nav ul li.menu-search,
+header .header-line .column-login nav ul li.menu-heart,
+header .header-line .column-login nav ul li.menu-cart {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-size: cover;
+}
+header .header-line .column-login nav ul li.menu-account {
+  background-image: url("./account.png");
+}
+header .header-line .column-login nav ul li.menu-search {
+  background-image: url("./search.png");
+}
+header .header-line .column-login nav ul li.menu-heart {
+  background-image: url("./heart.png");
+}
+header .header-line .column-login nav ul li.menu-cart {
+  background-image: url("./cart.png");
+}
+header .banner-line {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+header .banner-line .banner-img {
+  align-items: center;
+  width: 100%;
+  height: 316px;
+  background-image: url("./banner.jpeg");
+  background-size: cover;
+  background-position: center center;
+  opacity: 50%;
+}
+header .banner-line .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+header .banner-line .banner-content .img-logo {
+  width: 71px;
+  height: 71px;
+  background-image: url("./logo.png");
+  background-size: cover;
+}
+header .banner-line .banner-content h1 {
+  color: black;
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+header .banner-line .banner-content .banner-link {
+  display: flex;
+  justify-content: space-between;
+}
+header .banner-line .banner-content .banner-link .banner-home {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+}
+header .banner-line .banner-content .banner-link .banner-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  text-align: left;
+  color: black;
+}
+header .banner-line .banner-content .banner-link .banner-cart {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 555px;
+  min-height: 100px;
+  background-color: beige;
+}
+footer .section.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 100px;
+  background-color: gray;
+}
+footer .section.container .column-address {
+  width: 33%;
+  height: auto;
+}
+footer .section.container .column-links {
+  width: 17%;
+  height: auto;
+}
+footer .section.container .column-help {
+  width: 17%;
+  height: auto;
+}
+footer .section.container .column-newsletter {
+  width: 33%;
+  height: auto;
+}
