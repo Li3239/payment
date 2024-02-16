@@ -8,3 +8,4 @@
 /.htaccess
 /wp-includes/
 /wp-content/uploads/
+/wp-content/debug.log

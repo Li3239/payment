@@ -1,34 +1,141 @@
-body {
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 555px;
+    min-height: 100px;
 
-    margin: 0;
-    // background-color: rgb(105, 12, 198);
-    // color: green;
-}
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        margin: 100px;
 
-// 定义常量
-$mybackground: red;
-
-
-.subclass {
-    background-color: aliceblue;
-
-    div {
-        p {
-            color: $mybackground;
+        .column-address {
+            width: 33%;
+            height: auto;
         }
 
-        .subclass1 {
-            color: #000;
-        }
+        .column-links,
+        .column-help {
+            width: 17%;
+            height: auto;
 
-        a {
-            :hover {
-                color: rebeccapurple;
+            span {
+                display: block;
+                color: $secondary-font-color;
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 50px;
             }
 
-            ::after {
-                color: #000;
+            ul {
+                list-style-type: none;
+
+                li {
+                    margin-bottom: 50px;
+
+                    a {
+                        text-decoration: none;
+                        line-height: 30px;
+                        color: $primary-font-color;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+                }
             }
         }
+
+        .column-newsletter {
+            width: 33%;
+            height: auto;
+
+            span {
+                display: block;
+                color: $secondary-font-color;
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 50px;
+            }
+
+            .subscribe {
+                width: 400px;
+
+                .subscribe-form {
+                    display: flex;
+                    align-items: center;
+
+                    input[type="email"] {
+                        width: 50%;
+                        // flex-grow: 1;
+                        margin-right: 10px;
+                        border: none;
+                        border-bottom: 1px solid $primary-font-color;
+                        padding-bottom: 10px;
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        letter-spacing: 0em;
+                        text-align: left;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    button {
+                        background: none;
+                        border: none;
+                        border-bottom: 1px solid $primary-font-color;
+                        padding-bottom: 10px;
+                        color: $primary-font-color;
+                        // text-decoration: underline;
+                        cursor: pointer;
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                        letter-spacing: 0em;
+                        text-align: left;
+
+                        &:hover {
+                            color: darkblue; // 鼠标悬停时的颜色变化
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-line {
+        width: 100%;
+        height: 1px;
+        flex-shrink: 0;
+        background-color: #FFF;
+        opacity: 0.1;
+        margin-top: 60px;
+        margin-bottom: 24px;
+    }
+
+    .container-copyright {
+        width: 100%;
+        height: auto;
     }
 }

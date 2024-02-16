@@ -1,6 +1,6 @@
 <?php
 
-// require_once("settings.php");
+require_once("settings.php");
 // require_once(__DIR__ . "/shortcodes/shortcodes.php");
 
 function mytheme_enqueue()
@@ -23,10 +23,10 @@ function mytheme_init()
     $menu = array(
         'main_menu' => 'main_menu',
         'main_menu_icons' => 'main_menu_icons',
-        'footer_logo' => 'footer_logo',
-        'footer_information' => 'footer_information',
-        'footer_contacts' => 'footer_contacts',
-        'footer_social_media' => 'footer_social_media'
+        'footer_address' => 'footer_address',
+        'footer_links' => 'footer_links',
+        'footer_help' => 'footer_help',
+        'footer_newsletter' => 'footer_newsletter'
     );
     register_nav_menus($menu);
 }

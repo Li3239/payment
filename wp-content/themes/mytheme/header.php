@@ -35,4 +35,16 @@
                 ?>
             </div>
         </div>
+        <div class="banner-line">
+            <div class="banner-img" alt="Banner image">
+                <div class="banner-content">
+                    <div class="img-logo"></div>
+                    <h1>Cart</h1>
+                    <div class="banner-link">
+                        <p class="banner-home">Home</p>
+                        <p class="banner-arrow">></p>
+                        <p class="banner-cart">Cart</p>
+                    </div>
+                </div>
+            </div>
     </header>
