@@ -56,3 +56,7 @@ Stack trace:
 #8 {main}
   thrown in /Users/nanli/Documents/000_LiLi/2023-2024 Webbutvecklare inriktning e-handel/003_php wordpress/payment/wp-includes/class-wp-hook.php on line 324
 [20-Feb-2024 11:01:14 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in /Users/nanli/Documents/000_LiLi/2023-2024 Webbutvecklare inriktning e-handel/003_php wordpress/payment/wp-includes/functions.php on line 6031
+[20-Feb-2024 12:49:37 UTC] PHP Deprecated:  strlen(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\payment\wp-includes\formatting.php on line 885
+[20-Feb-2024 12:49:37 UTC] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\laragon\www\payment\wp-admin\includes\export.php on line 204
+[20-Feb-2024 12:50:39 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\laragon\www\payment\wp-content\plugins\woocommerce\src\Internal\Admin\Orders\PageController.php on line 146
+[20-Feb-2024 12:51:58 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\laragon\www\payment\wp-includes\functions.php on line 6031
