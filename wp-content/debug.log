@@ -64,3 +64,18 @@ Stack trace:
 [20-Feb-2024 13:15:48 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\laragon\www\payment\wp-includes\functions.php on line 6031
 [20-Feb-2024 13:16:09 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\laragon\www\payment\wp-includes\functions.php on line 6031
 [20-Feb-2024 13:16:14 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\laragon\www\payment\wp-includes\functions.php on line 6031
+[20-Feb-2024 13:25:57 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\laragon\www\payment\wp-includes\functions.php on line 6031
+[20-Feb-2024 13:26:00 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\laragon\www\payment\wp-includes\functions.php on line 6031
+[20-Feb-2024 13:26:05 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\laragon\www\payment\wp-includes\functions.php on line 6031
+[20-Feb-2024 13:26:05 UTC] PHP Warning:  Undefined array key "email" in C:\laragon\www\payment\wp-content\themes\mytheme\footer.php on line 72
+[20-Feb-2024 13:28:28 UTC] PHP Warning:  require_once(checkout-hooks.php): Failed to open stream: No such file or directory in C:\laragon\www\payment\wp-content\themes\mytheme\functions.php on line 11
+[20-Feb-2024 13:28:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'checkout-hooks.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\payment\wp-content\themes\mytheme\functions.php:11
+Stack trace:
+#0 C:\laragon\www\payment\wp-settings.php(611): include()
+#1 C:\laragon\www\payment\wp-config.php(98): require_once('C:\\laragon\\www\\...')
+#2 C:\laragon\www\payment\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#3 C:\laragon\www\payment\wp-admin\admin-ajax.php(22): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\payment\wp-content\themes\mytheme\functions.php on line 11
+[20-Feb-2024 13:28:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\laragon\www\payment\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[20-Feb-2024 13:28:29 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\laragon\www\payment\wp-includes\class-wp-recovery-mode-email-service.php on line 368

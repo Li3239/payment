@@ -2,11 +2,18 @@
 
 require_once('vite.php');
 
+require_once("hooks.php");
+
+require_once("checkout-hooks.php");
+
 if (!defined('ABSPATH')) {
     exit;
 }
 
 require_once(get_template_directory() . "/init.php");
+
+
+
 
 /**
  * support Woocommerce function
