@@ -73,26 +73,22 @@ header {
             align-items: center;
             justify-content: flex-end;
             width: 40%;
-
             nav {
                 display: flex;
                 justify-content: flex-end;
                 width: 100%;
                 height: auto;
-
                 ul {
-
-
                     li {
                         list-style: none;
                         margin-right: 20px;
                         flex-shrink: 0;
                         position: relative;
                         margin-right: 50px;
-
                         a {
                             text-decoration: none;
-                            visibility: hidden;
+                            // visibility: hidden;
+                                color: transparent;
                         }
                     }
 
@@ -104,8 +100,6 @@ header {
                         display: inline-block;
                         width: 24px;
                         height: 24px;
-                        // top: 4.67px;
-                        // left: 2.33px;
                         flex-shrink: 0;
                         background-size: cover;
                     }
