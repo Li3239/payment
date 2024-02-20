@@ -23,3 +23,12 @@ function remove_billing_address_2_field($fields) {
     }
     return $fields;
 }
+
+add_filter('woocommerce_default_address_fields', 'custom_override_default_address_fields');
+
+function custom_override_default_address_fields($fields) {
+    $fields['state']['label'] = __('Province', 'woocommerce');
+    $fields['state']['required'] = true; // Om du vill att provinsen ska vara obligatorisk
+    return $fields;
+}
+

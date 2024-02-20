@@ -1,4 +1,8 @@
-
+main{
+    h2{
+        display:none;
+    }
+}
 
 .woocommerce{
 
@@ -25,6 +29,7 @@
                             line-height:54px;
                             font-family: Poppins, Arial, Helvetica, sans-serif;
                             font-weight:600;
+                            margin-bottom:40px;
         
                         }
                         .woocommerce-billing-fields__field-wrapper{
@@ -41,6 +46,8 @@
                                         font-size:16px;
                                         line-height:24px;
                                         margin-bottom:20px;
+                                        color:black;
+                                        margin-bottom:20px;
                               
                                     .required{
                                         display:none;
@@ -48,6 +55,7 @@
                           
                                 }
                                 span{
+                                    
         
                                     #billing_first_name{
                                         width: 211px;
@@ -77,6 +85,19 @@
                                         #9F9F9F;
                                         
                                     }
+                           
+
+                                    .select2-container .select2-selection--single{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        padding-top:20px;
+                                        
+                                     
+                                        
+                                    }
         
                                     #billing_address_1{
                                         width:453px;
@@ -84,7 +105,7 @@
                                         border-radius:10px;
                                         border:1px solid 
                                         #9F9F9F;
-                                        color:transparent;
+                                        
         
                                   
                                         
@@ -96,7 +117,7 @@
                                         border-radius:10px;
                                         border:1px solid 
                                         #9F9F9F;
-                                        color:transparent;
+                                        
                                         
                                     }
 
@@ -106,7 +127,7 @@
                                         border-radius:10px;
                                         border:1px solid 
                                         #9F9F9F;
-                                        color:transparent;
+                                       
                                         
                                     }
 
@@ -116,7 +137,7 @@
                                         border-radius:10px;
                                         border:1px solid 
                                         #9F9F9F;
-                                        color:transparent;
+                                        
                                         
                                     }
 
@@ -126,7 +147,7 @@
                                         border-radius:10px;
                                         border:1px solid 
                                         #9F9F9F;
-                                        color:transparent;
+                                       
                                         
                                     }    
                                 }             
@@ -141,18 +162,42 @@
         width:30%;
         margin-top: 100px;
     
-
         .woocommerce-checkout-review-order{
             width:100%;
   
-
             .shop_table{
                 border:none;
+                
+
+                th{
+                    border-top:none;                  
+                }
+                    td{
+                        border:none;
+                    }
+
+                    tr.cart-subtotal{
+                        border-top:none;
+                        border:none;        
+                    }
+
+                    .woocommerce-Price-currencySymbol{
+                        display:none;
+                    }
+
+                    .woocommerce-Price-amount{
+                        bdi{
+                        color:#B88E2F;
+                        }
+                    }
+
+                .woocommerce-shipping-totals{
+                    display:none;
+                }
             }
         }
     }
-    
-  
-
        
 }
+
+
