@@ -39,11 +39,15 @@
             <div class="banner-img" alt="Banner image">
                 <div class="banner-content">
                     <div class="img-logo"></div>
-                    <h1>Cart</h1>
+                    <div>
+                    <h1> <?php wp_title(); ?> </h1>
+                    </div>
+                    
                     <div class="banner-link">
-                        <p class="banner-home">Home</p>
-                        <p class="banner-arrow">></p>
-                        <p class="banner-cart">Cart</p>
+
+                    <p class="banner-home banner-arrow banner-cart">
+                    <?php woocommerce_breadcrumb(); ?>
+                    </p>
                     </div>
                 </div>
             </div>
