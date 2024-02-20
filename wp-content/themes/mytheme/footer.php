@@ -1,4 +1,18 @@
 <footer>
+    <section class="container-store-infomation">
+        <div class="information-column">
+            <h1><?= get_option('store_info_title_1') ?></h1>
+            <span><?= get_option('store_info_content_1') ?></span>
+        </div>
+        <div class="information-column">
+            <h1><?= get_option('store_info_title_2') ?></h1>
+            <span><?= get_option('store_info_content_2') ?></span>
+        </div>
+        <div class="information-column">
+            <h1><?= get_option('store_info_title_3') ?></h1>
+            <span><?= get_option('store_info_content_3') ?></span>
+        </div>
+    </section>
     <section class="container">
         <div class="column-address">
             <span><?= get_option('store_address'); ?></span>
@@ -39,9 +53,9 @@
         </div>
     </section>
 
-    <div class="footer-line"></div>
-
+    
     <section class="container-copyright">
+        <div class="footer-line"></div>
         <span class="site-info">
             <?= get_option("store_copyright") ?>
         </span>

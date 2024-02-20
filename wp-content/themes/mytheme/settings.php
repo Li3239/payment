@@ -204,6 +204,124 @@ function mytheme_add_settings_init()
         )
     );
 
+    //----------------------------
+    // store information title 1
+    //----------------------------
+    register_setting(
+        "butik",
+        "store_info_title_1"
+    );
+
+    add_settings_field(
+        "store_info_title_1",       //id
+        "Store information title 1", //title(will be shown on setting-butik page)
+        "mytheme_section_setting",  //callback function
+        "butik",                    //page
+        "butik_general",            //section
+        array(                      //multiple parameter
+            "option_name" => "store_info_title_1",
+            "option_type" => "text"
+        )
+    );
+
+    //----------------------------
+    // store information content 1
+    //----------------------------
+    register_setting(
+        "butik",
+        "store_info_content_1"
+    );
+
+    add_settings_field(
+        "store_info_content_1",       //id
+        "Store information content 1", //title(will be shown on setting-butik page)
+        "mytheme_section_setting",    //callback function
+        "butik",                      //page
+        "butik_general",              //section
+        array(                        //multiple parameter
+            "option_name" => "store_info_content_1",
+            "option_type" => "textarea"
+        )
+    );
+    //----------------------------
+    // store information title 2
+    //----------------------------
+    register_setting(
+        "butik",
+        "store_info_title_2"
+    );
+
+    add_settings_field(
+        "store_info_title_2",       //id
+        "Store information title 2", //title(will be shown on setting-butik page)
+        "mytheme_section_setting",  //callback function
+        "butik",                    //page
+        "butik_general",            //section
+        array(                      //multiple parameter
+            "option_name" => "store_info_title_2",
+            "option_type" => "text"
+        )
+    );
+
+    //----------------------------
+    // store information content 2
+    //----------------------------
+    register_setting(
+        "butik",
+        "store_info_content_2"
+    );
+
+    add_settings_field(
+        "store_info_content_2",       //id
+        "Store information content 2", //title(will be shown on setting-butik page)
+        "mytheme_section_setting",    //callback function
+        "butik",                      //page
+        "butik_general",              //section
+        array(                        //multiple parameter
+            "option_name" => "store_info_content_2",
+            "option_type" => "textarea"
+        )
+    );
+    //----------------------------
+    // store information title 3
+    //----------------------------
+    register_setting(
+        "butik",
+        "store_info_title_3"
+    );
+
+    add_settings_field(
+        "store_info_title_3",       //id
+        "Store information title 3", //title(will be shown on setting-butik page)
+        "mytheme_section_setting",  //callback function
+        "butik",                    //page
+        "butik_general",            //section
+        array(                      //multiple parameter
+            "option_name" => "store_info_title_3",
+            "option_type" => "text"
+        )
+    );
+
+    //----------------------------
+    // store information content 3
+    //----------------------------
+    register_setting(
+        "butik",
+        "store_info_content_3"
+    );
+
+    add_settings_field(
+        "store_info_content_3",       //id
+        "Store information content 3", //title(will be shown on setting-butik page)
+        "mytheme_section_setting",    //callback function
+        "butik",                      //page
+        "butik_general",              //section
+        array(                        //multiple parameter
+            "option_name" => "store_info_content_3",
+            "option_type" => "textarea"
+        )
+    );
+
     //------------------
     // show message checkbox
     //------------------
@@ -234,90 +352,99 @@ function mytheme_add_settings_section_general()
     echo "<hr>";
 }
 
-// Ritar ut inställningsfältet
+// draw the Settings page
 function mytheme_section_setting($args)
 {
     $option_name = $args["option_name"];
     $option_type = $args["option_type"];
     $option_value = get_option($args["option_name"]);
-    //skriv in i DB
-    // echo '<input type="text" id="store_message" name="store_message" value="'. $value. '"/>';
-    echo '<input type="' . $option_type . '" 
-                 id="' . $option_name . '" 
-                 name="' . $option_name . '" 
-                 value="' . $option_value . '"
-          />';
+    
+    //render in HTML
+    if ($option_type === 'textarea') {
+        // render a textarea element
+        echo '<textarea id="' . esc_attr($option_name) . '" 
+        name="' . esc_attr($option_name) . '"
+        rows="5" 
+        cols="50">' . esc_textarea($option_value) . '</textarea>';
+    } else {
+        // render a input element
+        echo '<input type="' . esc_attr($option_type) . '" 
+                     id="' . esc_attr($option_name) . '" 
+                     name="' . esc_attr($option_name) . '" 
+                     value="' . esc_attr($option_value) . '"
+              />';
+    }
 }
 
 
 
-function mytheme_add_top_block_settings_init()
-{
-    add_settings_section(
-        'top_block', 
-        'Top Block Setting', 
-        'mytheme_add_project_top_settings_section_general',
-        'butik'                       
-    );
+// function mytheme_add_top_block_settings_init()
+// {
+//     add_settings_section(
+//         'top_block', 
+//         'Top Block Setting', 
+//         'mytheme_add_project_top_settings_section_general',
+//         'butik'                       
+//     );
 
-    register_setting(
-        "butik",  
-        "top_block_title_1"
-    );
+//     register_setting(
+//         "butik",  
+//         "top_block_title_1"
+//     );
 
-    add_settings_field(
-        "top_block_title_1",
-        "Title_1",          
-        "mytheme_section_setting",
-        "butik",                  
-        "top_block",              
-        array(                    
-            "option_name" => "top_block_title_1",
-            "option_type" => "text"
-        )
-    );
+//     add_settings_field(
+//         "top_block_title_1",
+//         "Title_1",          
+//         "mytheme_section_setting",
+//         "butik",                  
+//         "top_block",              
+//         array(                    
+//             "option_name" => "top_block_title_1",
+//             "option_type" => "text"
+//         )
+//     );
 
-    register_setting(
-        "butik", 
-        "top_block_title_2"
-    );
+//     register_setting(
+//         "butik", 
+//         "top_block_title_2"
+//     );
 
-    add_settings_field(
-        "top_block_title_2",
-        "Title_2",          
-        "mytheme_section_setting",
-        "butik",                  
-        "top_block",              
-        array(                    
-            "option_name" => "top_block_title_2",
-            "option_type" => "text"
-        )
-    );
+//     add_settings_field(
+//         "top_block_title_2",
+//         "Title_2",          
+//         "mytheme_section_setting",
+//         "butik",                  
+//         "top_block",              
+//         array(                    
+//             "option_name" => "top_block_title_2",
+//             "option_type" => "text"
+//         )
+//     );
 
-    register_setting(
-        "butik",    
-        "top_block_image" 
-    );
+//     register_setting(
+//         "butik",    
+//         "top_block_image" 
+//     );
 
-    add_settings_field(
-        "top_block_image",
-        "Image Url",      
-        "mytheme_section_setting", 
-        "butik",                   
-        "top_block",              
-        array(                    
-            "option_name" => "top_block_image",
-            "option_type" => "text"
-        )
-    );
+//     add_settings_field(
+//         "top_block_image",
+//         "Image Url",      
+//         "mytheme_section_setting", 
+//         "butik",                   
+//         "top_block",              
+//         array(                    
+//             "option_name" => "top_block_image",
+//             "option_type" => "text"
+//         )
+//     );
 
-}
-add_action('admin_init', 'mytheme_add_top_block_settings_init');
+// }
+// add_action('admin_init', 'mytheme_add_top_block_settings_init');
 
-function mytheme_add_project_top_settings_section_general()
-{
-    echo "<hr>";
-    echo "<hr>";
-    echo "<p> Top Block shortcode setting</p>";
-    echo "<hr>";
-}
+// function mytheme_add_project_top_settings_section_general()
+// {
+//     echo "<hr>";
+//     echo "<hr>";
+//     echo "<p> Top Block shortcode setting</p>";
+//     echo "<hr>";
+// }

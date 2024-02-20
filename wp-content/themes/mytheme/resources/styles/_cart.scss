@@ -1,0 +1,229 @@
+main {
+    // 需要查一下， 这里如何设定h2为不可见，那么main下边所有的 h2 都不可见
+    // h2 {
+    //     visibility: hidden;
+    // }
+
+    .woocommerce {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 80px 30px 80px;
+
+        .woocommerce-cart-form {
+            width: 65%;
+            margin-right: 20px;
+
+            .shop_table {
+                border: 0;
+
+                thead {
+                    background-color: $secondary-background-color;
+
+                    th {
+                        border-collapse: collapse;
+                        border: 0;
+                        @include primary-font-commonStyles();
+                    }
+
+                    .product-quantity {
+                        text-align: center;
+                    }
+                }
+
+                tbody {
+                    .woocommerce-cart-form__cart-item {
+                        .product-remove {
+                            a {
+                                width: 28px;
+                                height: 28px;
+                                font-size: 0;
+                                visibility: hidden;
+                            }
+
+                            a::before {
+                                content: url('../../assets/images/cart-delete.png');
+                                visibility: visible;
+                                display: inline-block;
+                                font-size: initial;
+                            }
+                        }
+
+                        .product-thumbnail {
+                            width: 106px;
+                            height: 106px;
+
+                            img {
+                                border-radius: 10px;
+                                background-color: #FBEBB5;
+                            }
+                        }
+
+                        .product-name {
+                            @include secondary-font-commonStyles();
+                            color: $secondary-font-color;
+
+                            a {
+                                text-decoration: none;
+                            }
+                        }
+
+                        .product-price {
+                            @include secondary-font-commonStyles();
+                            color: $secondary-font-color;
+
+                            .woocommerce-Price-amount {
+                                @include secondary-font-commonStyles();
+                                color: $secondary-font-color;
+                            }
+                        }
+
+                        .product-quantity {
+                            .quantity {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            .input-text {
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                width: 32px !important;
+                                height: 32px;
+                                text-align: center;
+                                border-radius: 5px;
+                                border: 1px solid $secondary-font-color;
+                                //------------------------------------------
+                                // hide plus/minus button on input emlement
+                                //------------------------------------------
+                                // for Chrome, Safari, Opera
+                                -webkit-appearance: none !important;
+                                // for Firefox
+                                -moz-appearance: textfield !important;
+                                // propery for plus/minus button 
+                                appearance: none;
+
+                                width: 100%;
+                                padding: 5px;
+                                border: 1px solid #ccc;
+                            }
+
+                            .input-text::-webkit-inner-spin-button,
+                            .input-text::-webkit-outer-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+
+                            // for IE11, Edge
+                            .input-text::-ms-clear,
+                            .input-text::-ms-reveal {
+                                display: none;
+                            }
+
+                            // extra：improve Firefox style，hide plus/minus button, input function avilable
+                            @-moz-document url-prefix() {
+                                #custom-quantity-input {
+                                    -moz-appearance: textfield;
+                                }
+                            }
+                        }
+
+                        .product-subtotal {
+                            @include secondary-font-commonStyles();
+                        }
+                    }
+
+                    // hide update cart
+                    .actions {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+
+        .cart-collaterals {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+
+            .cart_totals {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                width: 100%;
+                background-color: $secondary-background-color;
+
+                h2 {
+                    color: $primary-font-color;
+                    font-family: Poppins;
+                    font-size: 32px;
+                    font-weight: 600;
+                    line-height: 48px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin: 50px 0 50px 0;
+                }
+
+                .shop_table {
+                    width: 80%;
+                    align-items: center;
+                    border-collapse: collapse;
+                    border: 0;
+                    margin-bottom: 20px;
+
+                    .cart-subtotal {
+                        th {
+                            @include primary-font-commonStyles();
+                        }
+
+                        .woocommerce-Price-amount {
+                            @include secondary-font-commonStyles();
+                        }
+                    }
+
+                    .order-total {
+                        th {
+                            @include primary-font-commonStyles();
+                        }
+
+                        .woocommerce-Price-amount {
+                            @include tertiary-font-commonStyles();
+                            color: $tertiary-font-color;
+                        }
+                    }
+
+                    // delete border between table line
+                    td,
+                    th {
+                        border-collapse: collapse;
+                        border: 0;
+                    }
+                }
+
+                // "check out" button
+                .wc-proceed-to-checkout {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 222px;
+                    height: 58.95px;
+                    border-radius: 15px;
+                    border: 1px solid;
+                    text-align: center;
+                    margin-bottom: 100px;
+
+                    .checkout-button {
+                        background-color: transparent;
+                        color: $primary-font-color;
+                        @include neutral-font-commonStyles();
+                    }
+                }
+            }
+        }
+
+    }
+}

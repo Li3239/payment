@@ -1,10 +1,3 @@
-/wp-admin/
-/wp-content/plugins/
-/wp-content/themes/twentytwentyfour
-/wp-content/themes/twentytwentythree
-/wp-content/themes/twentytwentytwo
+/wp-config.php
+/wp-content/uploads
 /wp-content/themes/mytheme/node_modules
-/.htaccess
-/wp-includes/
-/wp-content/uploads/
-/wp-content/debug.log
