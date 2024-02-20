@@ -1,0 +1,158 @@
+
+
+.woocommerce{
+
+    form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+        .col2-set{
+            width:70%;
+
+            .col-1{
+                display:flex;
+                justify-content:center;
+                width:80%;
+
+                .woocommerce-billing-fields{
+                    width: 608px;
+                    height: 1724px;
+                        
+        
+                        h3{
+                            font-size:36px;
+                            line-height:54px;
+                            font-family: Poppins, Arial, Helvetica, sans-serif;
+                            font-weight:600;
+        
+                        }
+                        .woocommerce-billing-fields__field-wrapper{
+        
+                            width:460px;
+        
+                         
+        
+                                label{
+        
+                                    
+                                        font-family: Poppins,Arial, Helvetica, sans-serif;
+                                        font-weight: 500;
+                                        font-size:16px;
+                                        line-height:24px;
+                                        margin-bottom:20px;
+                              
+                                    .required{
+                                        display:none;
+                                    }
+                          
+                                }
+                                span{
+        
+                                    #billing_first_name{
+                                        width: 211px;
+                                        height: 75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        
+        
+                                    }
+        
+                                    
+                                    #billing_last_name{
+                                        width: 211px;
+                                        height: 75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+        
+                                    }
+        
+                                    #billing_company{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        
+                                    }
+        
+                                    #billing_address_1{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        color:transparent;
+        
+                                  
+                                        
+                                    }
+
+                                    #billing_postcode{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        color:transparent;
+                                        
+                                    }
+
+                                    #billing_city{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        color:transparent;
+                                        
+                                    }
+
+                                    #billing_phone{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        color:transparent;
+                                        
+                                    }
+
+                                    #billing_email{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                        color:transparent;
+                                        
+                                    }    
+                                }             
+                    }
+                }
+
+            }  
+        }          
+    }
+
+    .min-div{
+        width:30%;
+        margin-top: 100px;
+    
+
+        .woocommerce-checkout-review-order{
+            width:100%;
+  
+
+            .shop_table{
+                border:none;
+            }
+        }
+    }
+    
+  
+
+       
+}
