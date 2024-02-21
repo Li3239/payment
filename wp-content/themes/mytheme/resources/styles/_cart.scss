@@ -1,9 +1,4 @@
 main {
-    // 需要查一下， 这里如何设定h2为不可见，那么main下边所有的 h2 都不可见
-    // h2 {
-    //     visibility: hidden;
-    // }
-
     .woocommerce {
         display: flex;
         justify-content: space-between;
@@ -15,10 +10,9 @@ main {
 
             .shop_table {
                 border: 0;
-
+                
                 thead {
                     background-color: $secondary-background-color;
-
                     th {
                         border-collapse: collapse;
                         border: 0;
@@ -165,7 +159,7 @@ main {
                     line-height: 48px;
                     letter-spacing: 0em;
                     text-align: left;
-                    margin: 50px 0 50px 0;
+                    margin: 20px 0 50px 0;
                 }
 
                 .shop_table {
@@ -184,7 +178,9 @@ main {
                             @include secondary-font-commonStyles();
                         }
                     }
-
+                    .woocommerce-shipping-totals {
+                        display: none;
+                    }
                     .order-total {
                         th {
                             @include primary-font-commonStyles();
