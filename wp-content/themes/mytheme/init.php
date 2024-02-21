@@ -8,7 +8,7 @@ function mytheme_enqueue()
     //get the content uri: eg. wp_content/themes/mytheme
     $theme_directory = get_template_directory_uri();
 
-    //wp_enqueue_style("mystyle", $theme_directory . "/style.css");
+    wp_enqueue_style("mystyle", $theme_directory . "/style.css");
     // wp_enqueue_script("app", $theme_directory . "/app.js");
     wp_enqueue_script('cart-js', $theme_directory . '/assets/js/cart.js');
 }
