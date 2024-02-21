@@ -53,10 +53,9 @@ main {
                         }
 
                         .product-name {
-                            @include secondary-font-commonStyles();
-                            color: $secondary-font-color;
-
                             a {
+                                @include secondary-font-commonStyles();
+                                    color: $secondary-font-color;
                                 text-decoration: none;
                             }
                         }
@@ -171,6 +170,11 @@ main {
 
                         .woocommerce-Price-amount {
                             @include secondary-font-commonStyles();
+                            bdi {
+                                display: block;
+                                text-align: right;
+                                margin-right: 50px;
+                            }
                         }
                     }
                     .woocommerce-shipping-totals {
@@ -184,6 +188,11 @@ main {
                         .woocommerce-Price-amount {
                             @include tertiary-font-commonStyles();
                             color: $tertiary-font-color;
+                            bdi {
+                                display: block;
+                                text-align: right;
+                                margin-right: 50px;
+                            }
                         }
                     }
 
