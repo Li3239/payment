@@ -5,6 +5,7 @@ main{
 }
 
 .woocommerce{
+   
 
     form{
     display: flex;
@@ -12,12 +13,12 @@ main{
     width: 100%;
 
         .col2-set{
-            width:70%;
+            width:80%;
 
             .col-1{
                 display:flex;
                 justify-content:center;
-                width:80%;
+                width:100%;
 
                 .woocommerce-billing-fields{
                     width: 608px;
@@ -85,19 +86,18 @@ main{
                                         #9F9F9F;
                                         
                                     }
-                           
 
-                                    .select2-container .select2-selection--single{
+                                    #billing_country{
                                         width:453px;
                                         height:75px;
                                         border-radius:10px;
                                         border:1px solid 
                                         #9F9F9F;
-                                        padding-top:20px;
-                                        
-                                     
                                         
                                     }
+                           
+
+                              
         
                                     #billing_address_1{
                                         width:453px;
@@ -122,6 +122,16 @@ main{
                                     }
 
                                     #billing_city{
+                                        width:453px;
+                                        height:75px;
+                                        border-radius:10px;
+                                        border:1px solid 
+                                        #9F9F9F;
+                                       
+                                        
+                                    }
+
+                                    #billing_province{
                                         width:453px;
                                         height:75px;
                                         border-radius:10px;
@@ -159,14 +169,20 @@ main{
     }
 
     .min-div{
-        width:30%;
+        width:35%;
         margin-top: 100px;
+        margin-right:5px;
     
         .woocommerce-checkout-review-order{
             width:100%;
   
             .shop_table{
+
+        
+                width:529;
+                font-family: Poppins;
                 border:none;
+                border-bottom: 1px solid #cccccc;
                 
 
                 th{
@@ -189,6 +205,7 @@ main{
                         bdi{
                             
                                 color:#B88E2F;
+                              
                             
                         }
                     }
@@ -208,13 +225,24 @@ main{
 
 
     .wc_payment_methods{
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
         background-color:white;
+        width:529;
+        font-family: Poppins;
+        border:none;
+        border-bottom:none;
+
+
        
 
     }
 
     .wc_payment_method {
         background-color:white;
+       
+        
 
         input[type="radio"] {
             -webkit-appearance: none;
@@ -226,39 +254,82 @@ main{
             border: 1px solid rgb(195, 195, 195); 
             background-color: rgb(246, 245, 245); 
             outline: none; 
+
+     
         }
         input[type="radio"]:checked {
             background-color: black; 
             border-color: black; 
         }
 
-    }
-
-    
-    .payment_box{
-
-        background-color:white;
-        
-        
         p{
             background-color:white;
+            color: #9F9F9F;          
         }
-        
     }
 
-    .form-row{
+
+
+    .form-row{   
         background-color: white;
-        border:none;
-    }
-    
+        border:none;       
+    }  
 }
 
 
+
+//Svår att hitta, fick egen target-styling.
 #add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box{
     background-color:white;
-
     &::before{
         border:none;
     }
+}
+
+
+//Svår att hitta, fick egen target-styling.
+.woocommerce form .form-row label.checkbox, .woocommerce-page form .form-row label.checkbox{
+display:none;
+}
+
+//Svår att hitta, fick egen target-styling.
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods{
+    border-bottom:none;
+}
+
+
+
+.woocommerce-privacy-policy-text{
+
+    p{
+        @include primary-font-commonStyles;
+        width:529;
+        height:72px;
+  
+
+        a{
+            color:black;
+            text-decoration:none;
+            font-weight:bold;
+             
+        }
+    }
+
+
+    button#place_order.button.alt{
+        font-family: Poppins;
+        background-color:white;
+        color:black;
+        width: 318px;
+        height: 64px;
+        top: 1118px;
+        left: 883px;
+        border-radius: 15px;
+        border: 1px solid grey;
+        margin-right:30px;
+    }
+
+
+
 }
 
