@@ -201,3 +201,35 @@ main{
 }
 
 
+.woocommerce-checkout-payment{
+
+    .wc_payment_method {
+        background-color: white;
+
+    }
+
+    
+    .payment_box{
+        background-color: white;
+    }
+
+    .payment_method_bacs{
+        color:black;
+
+    }
+
+    .wc_payment_methods{
+        background-color:white;
+
+        .payment_box{
+            display:none;
+          
+        }
+    }
+
+    .form-row{
+        background-color: white;
+        border:none;
+    }
+    
+}
