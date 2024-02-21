@@ -24,9 +24,3 @@ function remove_billing_address_2_field($fields) {
     return $fields;
 }
 
-
-function add_class_to_checkout_button() {
-    echo '<style>.checkout-button { background-color: red; }</style>';
-}
-
-add_action('woocommerce_after_checkout_form', 'add_class_to_checkout_button');
