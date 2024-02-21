@@ -56,7 +56,8 @@ main{
                           
                                 }
                                 span{
-                                    
+
+   
         
                                     #billing_first_name{
                                         width: 211px;
@@ -65,7 +66,7 @@ main{
                                         border:1px solid 
                                         #9F9F9F;
                                         
-        
+                     
                                     }
         
                                     
@@ -183,6 +184,16 @@ main{
                 font-family: Poppins;
                 border:none;
                 border-bottom: 1px solid #cccccc;
+
+                thead{
+                    .product-name{
+                        font-size: 24px;
+                    }
+
+                    .product-total{
+                        font-size: 24px;
+                    }
+                }
 
                 th{
                     border-top:none;                  
