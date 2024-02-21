@@ -13,6 +13,8 @@ function remove_order_review_heading() {
     return '';
 }
 
+
+
 add_filter('woocommerce_checkout_fields', 'remove_billing_address_2_field');
 
 function remove_billing_address_2_field($fields) {
