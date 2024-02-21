@@ -39,16 +39,16 @@
             <div class="banner-img" alt="Banner image">
                 <div class="banner-content">
                     <div class="img-logo"></div>
-                    <div>
-                    <h1> <?php wp_title(); ?> </h1>
-                    </div>
-                    
-                    <div class="banner-link">
-
-                    <p class="banner-home banner-arrow banner-cart">
-                    <?php woocommerce_breadcrumb(); ?>
-                    </p>
-                    </div>
+                    <h1> <?php the_title(); ?> </h1>
+                    <?php
+                    woocommerce_breadcrumb(array(
+                        'delimiter' => '<span class="breadcrumb-delimiter"></span>',
+                        'wrap_before' => '<div class="woocommerce-breadcrumb">',
+                        'wrap_after' => '</div>',
+                        'before' => '<span class="breadcrumb-item">',
+                        'after' => '</span>',
+                    ));
+                    ?>
                 </div>
             </div>
     </header>
