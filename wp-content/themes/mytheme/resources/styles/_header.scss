@@ -17,7 +17,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: right;
-            width: 60%;
+            width: 68%;
             margin-right: 20px;
 
             ul {
@@ -26,7 +26,7 @@ header {
 
                 li {
                     list-style: none;
-                    margin-right: 20px;
+                    margin-right: 25px;
                     flex-shrink: 0;
                     position: relative;
                     margin-right: 50px;
@@ -72,7 +72,8 @@ header {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            width: 40%;
+            width: 32%;
+                margin-right: 50px;
             nav {
                 display: flex;
                 justify-content: flex-end;
@@ -132,71 +133,80 @@ header {
             align-items: center;
             width: 100%;
             height: 316px;
-            background-image: url('../../assets/images/banner.jpeg');
-            background-size: cover;
-            background-position: center center;
-            opacity: 50%;
-        }
-
-        .banner-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-
-            .img-logo {
-                width: 71px;
-                height: 71px;
-                background-image: url('../../assets/images/logo.png');
+            z-index: -1;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('../../assets/images/banner.jpeg');
                 background-size: cover;
+                background-position: center center;
+                opacity: 0.3;
+                z-index: -1;
             }
 
-            h1 {
-                color: $primary-font-color;
-                font-family: Poppins;
-                font-size: 48px;
-                font-weight: 500;
-                line-height: 72px;
-                letter-spacing: 0em;
-                text-align: left;
-            }
-
-            .banner-link {
-                display: flex;
-                justify-content: space-between;
-
-                .banner-home {
+            .banner-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                z-index: 1;
+                .img-logo {
+                    width: 71px;
+                    height: 71px;
+                    background-image: url('../../assets/images/logo.png');
+                    background-size: cover;
+                    margin: auto;
+                }
+                
+                h1 {
+                    color: $primary-font-color;
                     font-family: Poppins;
-                    font-size: 16px;
+                    font-size: 48px;
                     font-weight: 500;
-                    line-height: 24px;
+                    line-height: 72px;
                     letter-spacing: 0em;
                     text-align: left;
-                    color: $primary-font-color;
                 }
-
-                .banner-arrow {
+                .woocommerce-breadcrumb {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 20px;
-                    height: 20px;
-                    text-align: left;
-                    color: $primary-font-color;
-                }
+                    .breadcrumb-item {
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 300;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: $primary-font-color;
+                        a {
+                            text-decoration: none;
+                            font-family: Poppins;
+                            @include primary-font-commonStyles();
+                            color: $primary-font-color;
+                        }
+                    }
 
-                .banner-cart {
-                    font-family: Poppins;
-                    font-size: 16px;
-                    font-weight: 300;
-                    line-height: 24px;
-                    letter-spacing: 0em;
-                    text-align: left;
-                    color: $primary-font-color;
+                    .breadcrumb-delimiter {
+                        display: flex;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        width: 14px;
+                        height: 8px;
+                        color: $primary-font-color;
+                        background-image: url('../../assets/images/Vector.png');
+                        background-size: 8px 14px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
                 }
             }
-
         }
     }
 }
