@@ -183,7 +183,6 @@ main{
                 font-family: Poppins;
                 border:none;
                 border-bottom: 1px solid #cccccc;
-                
 
                 th{
                     border-top:none;                  
@@ -192,23 +191,40 @@ main{
                         border:none;
                     }
 
-                    tr.cart-subtotal{
+                    .cart_item{
+                        color:#9F9F9F;
+
+                        .product-quantity{
+                            color:black;
+                        }
+
+                        .product-total{
+                            color:black;
+                        }
+
+                    }
+
+                    .cart-subtotal{
                         border-top:none;
-                        border:none;        
+                        border:none;  
+                        
+                        td{
+                            font-weight: normal;
+                        }
                     }
 
                     .woocommerce-Price-currencySymbol{
                         display:none;
                     }
 
-                    .woocommerce-Price-amount{
-                        bdi{
-                            
+                    
+                        .order-total{
+                            td{
                                 color:#B88E2F;
-                              
+                            }
                             
                         }
-                    }
+ 
 
                 .woocommerce-shipping-totals{
                     display:none;
@@ -222,8 +238,6 @@ main{
 
 .woocommerce-checkout-payment{
 
-
-
     .wc_payment_methods{
         display:flex;
         justify-content:center;
@@ -233,17 +247,11 @@ main{
         font-family: Poppins;
         border:none;
         border-bottom:none;
-
-
-       
-
     }
 
     .wc_payment_method {
         background-color:white;
        
-        
-
         input[type="radio"] {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -253,9 +261,7 @@ main{
             border-radius: 50%;
             border: 1px solid rgb(195, 195, 195); 
             background-color: rgb(246, 245, 245); 
-            outline: none; 
-
-     
+            outline: none;   
         }
         input[type="radio"]:checked {
             background-color: black; 
@@ -267,8 +273,6 @@ main{
             color: #9F9F9F;          
         }
     }
-
-
 
     .form-row{   
         background-color: white;
@@ -301,6 +305,7 @@ display:none;
 
 .woocommerce-privacy-policy-text{
 
+
     p{
         @include primary-font-commonStyles;
         width:529;
@@ -316,20 +321,25 @@ display:none;
     }
 
 
-    button#place_order.button.alt{
-        font-family: Poppins;
-        background-color:white;
-        color:black;
-        width: 318px;
-        height: 64px;
-        top: 1118px;
-        left: 883px;
-        border-radius: 15px;
-        border: 1px solid grey;
-        margin-right:30px;
-    }
-
-
 
 }
 
+
+    
+#payment {
+
+
+
+    #place_order{
+    position:absolute;
+    margin-top: 20px;
+    margin-left: 90px;
+    font-family: Poppins;
+    background-color:white;
+    color:black;
+    width: 318px;
+
+    border-radius: 15px;
+    border: 1px solid grey;
+}
+}
