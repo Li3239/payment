@@ -33,3 +33,15 @@ function customize_checkout_button_text()
     return 'Check Out';
 }
 
+//change text on proceed to checkout btn
+function woocommerce_button_proceed_to_checkout()
+{
+
+    $new_checkout_url = WC()->cart->get_checkout_url();
+?>
+    <a href="<?php echo $new_checkout_url; ?>" class="checkout-button button alt wc-forward">
+
+        <?php _e('Check Out', 'woocommerce'); ?></a>
+
+<?php
+}

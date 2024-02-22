@@ -10,7 +10,7 @@ function mytheme_enqueue()
 
     wp_enqueue_style("mystyle", $theme_directory . "/style.css");
     // wp_enqueue_script("app", $theme_directory . "/app.js");
-    wp_enqueue_script('cart-js', $theme_directory . '/assets/js/cart.js');
+    // wp_enqueue_script('cart-js', $theme_directory . '/assets/js/cart.js');
 }
 add_action("wp_enqueue_scripts", "mytheme_enqueue");
 
